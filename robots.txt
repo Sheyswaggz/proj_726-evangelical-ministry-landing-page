@@ -1,0 +1,16 @@
+# robots.txt for Grace Community Church - Evangelical Ministry
+# Allows search engines to index all content to maximize discoverability
+
+# Allow all user agents to crawl the entire site
+User-agent: *
+Allow: /
+
+# Crawl delay to be respectful to server resources
+Crawl-delay: 1
+
+# Sitemap location (if available in the future)
+# Sitemap: https://gracecommunitychurch.org/sitemap.xml
+
+# Disallow specific paths if needed in the future
+# Disallow: /admin/
+# Disallow: /private/

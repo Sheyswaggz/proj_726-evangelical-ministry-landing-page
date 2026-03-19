@@ -2,19 +2,21 @@
  * EVANGELICAL MINISTRY LANDING PAGE - INTERACTIVE JAVASCRIPT
  * Vanilla JavaScript functionality for smooth scrolling, scroll-triggered animations,
  * mobile menu toggle, and performance optimizations.
- * @version 1.0.0
+ * Optimized for production with efficient event handling and browser compatibility.
+ * @version 1.0.1
  */
 
 (function() {
   'use strict';
 
-  // Configuration constants
+  // Configuration constants - optimized for performance
   const CONFIG = {
     ANIMATION_DELAY: 100,
     OBSERVER_THRESHOLD: 0.1,
     OBSERVER_ROOT_MARGIN: '0px 0px -50px 0px',
     SMOOTH_SCROLL_BEHAVIOR: 'smooth',
     DEBOUNCE_DELAY: 150,
+    PASSIVE_EVENTS: true,
   };
 
   // State management
@@ -390,20 +392,69 @@
   }
 
   /**
+   * Check browser compatibility and feature support
+   * Provides helpful warnings for unsupported browsers
+   */
+  function checkBrowserCompatibility() {
+    const features = {
+      IntersectionObserver: 'IntersectionObserver' in window,
+      CustomProperties: CSS.supports('(--test: 0)'),
+      Grid: CSS.supports('display', 'grid'),
+      Flexbox: CSS.supports('display', 'flex'),
+      PassiveEvents: false,
+    };
+
+    // Test passive event support
+    try {
+      const opts = Object.defineProperty({}, 'passive', {
+        get: function() {
+          features.PassiveEvents = true;
+          return true;
+        },
+      });
+      window.addEventListener('testPassive', null, opts);
+      window.removeEventListener('testPassive', null, opts);
+    } catch (e) {
+      features.PassiveEvents = false;
+    }
+
+    // Log feature support for debugging
+    console.log('Browser feature support:', features);
+
+    // Warn about critical missing features
+    if (!features.IntersectionObserver) {
+      console.warn('IntersectionObserver not supported - animations may not work');
+    }
+    if (!features.Grid) {
+      console.warn('CSS Grid not supported - layout may appear differently');
+    }
+
+    return features;
+  }
+
+  /**
    * Initialize error handling for browser compatibility
    * Provides graceful degradation for unsupported features
    */
   function initErrorHandling() {
     // Global error handler
     window.addEventListener('error', function(event) {
-      console.error('Global error caught:', event.error);
+      console.error('Global error caught:', {
+        message: event.message,
+        filename: event.filename,
+        line: event.lineno,
+        column: event.colno,
+      });
       // Prevent the page from breaking on errors
       event.preventDefault();
     });
 
     // Handle unhandled promise rejections
     window.addEventListener('unhandledrejection', function(event) {
-      console.error('Unhandled promise rejection:', event.reason);
+      console.error('Unhandled promise rejection:', {
+        reason: event.reason,
+        promise: event.promise,
+      });
       event.preventDefault();
     });
 
@@ -417,6 +468,9 @@
   function init() {
     try {
       console.log('Initializing interactive features...');
+
+      // Check browser compatibility
+      const browserFeatures = checkBrowserCompatibility();
 
       // Check for reduced motion preference
       state.isReducedMotion = prefersReducedMotion();
@@ -436,6 +490,13 @@
       initPerformanceOptimizations();
 
       console.log('All interactive features initialized successfully');
+      console.log('Page ready - performance metrics:', {
+        domReady: document.readyState,
+        timing: performance.timing ? {
+          loadTime: performance.timing.loadEventEnd - performance.timing.navigationStart,
+          domReadyTime: performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart,
+        } : 'not available',
+      });
     } catch (error) {
       console.error('Error during initialization:', error);
     }

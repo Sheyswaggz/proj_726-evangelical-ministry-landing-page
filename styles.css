@@ -2,6 +2,7 @@
    EVANGELICAL MINISTRY LANDING PAGE - CSS DESIGN SYSTEM
    A comprehensive mobile-first responsive design system with CSS Grid layouts,
    custom properties, and ministry-appropriate visual styling.
+   Optimized for performance with efficient selectors and minimal specificity.
    ============================================================================= */
 
 /* =============================================================================
@@ -21,6 +22,12 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
