@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <title>Grace Community Church | Evangelical Ministry</title>
+
+  <meta name="description" content="Grace Community Church - A welcoming evangelical ministry dedicated to sharing God's love and building His kingdom. Join us for worship, fellowship, and spiritual growth.">
+  <meta name="keywords" content="church, evangelical, ministry, worship, community, faith, Grace Community Church">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gracecommunitychurch.org/">
+  <meta property="og:title" content="Grace Community Church | Evangelical Ministry">
+  <meta property="og:description" content="A welcoming evangelical ministry dedicated to sharing God's love and building His kingdom. Join us for worship, fellowship, and spiritual growth.">
+  <meta property="og:image" content="https://gracecommunitychurch.org/images/church-social.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://gracecommunitychurch.org/">
+  <meta name="twitter:title" content="Grace Community Church | Evangelical Ministry">
+  <meta name="twitter:description" content="A welcoming evangelical ministry dedicated to sharing God's love and building His kingdom.">
+  <meta name="twitter:image" content="https://gracecommunitychurch.org/images/church-social.jpg">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://gracecommunitychurch.org/">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Structured Data - Local Business / Religious Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Church",
+    "name": "Grace Community Church",
+    "description": "A welcoming evangelical ministry dedicated to sharing God's love and building His kingdom through worship, teaching, and community service.",
+    "url": "https://gracecommunitychurch.org",
+    "telephone": "+1-555-123-4567",
+    "email": "info@gracecommunitychurch.org",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Faith Avenue",
+      "addressLocality": "Springfield",
+      "addressRegion": "IL",
+      "postalCode": "62701",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "39.7817",
+      "longitude": "-89.6501"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "09:00",
+        "closes": "12:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Wednesday",
+        "opens": "19:00",
+        "closes": "21:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/gracecommunitychurch",
+      "https://www.instagram.com/gracecommunitychurch",
+      "https://www.youtube.com/gracecommunitychurch"
+    ]
+  }
+  </script>
+
+  <style>
+    /* Critical CSS for above-the-fold content */
+    :root {
+      --color-primary: #2c5aa0;
+      --color-secondary: #f7f7f7;
+      --color-accent: #d4af37;
+      --color-text: #333333;
+      --color-text-light: #666666;
+      --color-background: #ffffff;
+      --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      --font-heading: Georgia, 'Times New Roman', serif;
+      --spacing-sm: 1rem;
+      --spacing-md: 2rem;
+      --spacing-lg: 4rem;
+      --max-width: 1200px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-primary);
+      color: var(--color-text);
+      line-height: 1.6;
+      background-color: var(--color-background);
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--color-primary);
+      color: white;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      z-index: 100;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    header {
+      background-color: var(--color-primary);
+      color: white;
+      padding: var(--spacing-sm) 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--spacing-sm);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-heading);
+      line-height: 1.2;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    /* Skeleton loading styles */
+    .skeleton {
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: loading 1.5s ease-in-out infinite;
+      border-radius: 4px;
+    }
+
+    @keyframes loading {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    /* Scroll reveal animation base */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Header Section -->
+  <header role="banner">
+    <div class="container">
+      <nav role="navigation" aria-label="Main navigation">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+          <div>
+            <h1 style="margin: 0; font-size: 1.75rem;">Grace Community Church</h1>
+            <p style="margin: 0; font-size: 0.9rem; opacity: 0.9;">Sharing God's Love, Building God's Kingdom</p>
+          </div>
+          <ul role="list" style="display: flex; list-style: none; gap: 1.5rem; margin-top: 1rem;">
+            <li><a href="#main" style="color: white; text-decoration: none; font-weight: 500;" aria-current="page">Home</a></li>
+            <li><a href="#about" style="color: white; text-decoration: none; font-weight: 500;">About</a></li>
+            <li><a href="#contact" style="color: white; text-decoration: none; font-weight: 500;">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main" role="main">
+
+    <!-- Hero Section -->
+    <section aria-labelledby="hero-title" style="background: linear-gradient(135deg, var(--color-primary) 0%, #1e3a5f 100%); color: white; padding: var(--spacing-lg) 0; text-align: center;">
+      <div class="container">
+        <h2 id="hero-title" style="font-size: 2.5rem; margin-bottom: var(--spacing-sm); max-width: 800px; margin-left: auto; margin-right: auto;">Welcome to Grace Community Church</h2>
+        <p style="font-size: 1.25rem; margin-bottom: var(--spacing-md); max-width: 700px; margin-left: auto; margin-right: auto; opacity: 0.95;">A place where faith comes alive, community thrives, and lives are transformed through the love of Jesus Christ.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: var(--spacing-md);">
+          <a href="#contact" style="background: var(--color-accent); color: var(--color-text); padding: 0.875rem 2rem; text-decoration: none; border-radius: 4px; font-weight: 600; transition: transform 0.3s ease, box-shadow 0.3s ease; display: inline-block;" class="cta-button" aria-label="Visit us and get directions">Visit Us</a>
+          <a href="#about" style="background: white; color: var(--color-primary); padding: 0.875rem 2rem; text-decoration: none; border-radius: 4px; font-weight: 600; transition: transform 0.3s ease, box-shadow 0.3s ease; display: inline-block;" class="cta-button" aria-label="Learn more about our ministry">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Statement Section -->
+    <section aria-labelledby="mission-title" class="reveal" style="padding: var(--spacing-lg) 0; background-color: var(--color-secondary);">
+      <div class="container" style="text-align: center;">
+        <h2 id="mission-title" style="font-size: 2rem; color: var(--color-primary); margin-bottom: var(--spacing-md);">Our Mission</h2>
+        <p style="font-size: 1.125rem; max-width: 800px; margin: 0 auto var(--spacing-md); color: var(--color-text-light);">At Grace Community Church, we are dedicated to sharing the Gospel of Jesus Christ and building a loving community of believers rooted in faith, hope, and service.</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-md); margin-top: var(--spacing-md);">
+          <div class="reveal" style="padding: var(--spacing-md); background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <h3 style="font-size: 1.25rem; color: var(--color-primary); margin-bottom: var(--spacing-sm);">Proclaim</h3>
+            <p style="color: var(--color-text-light);">Sharing the Good News of salvation through Jesus Christ with boldness and compassion.</p>
+          </div>
+          <div class="reveal" style="padding: var(--spacing-md); background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <h3 style="font-size: 1.25rem; color: var(--color-primary); margin-bottom: var(--spacing-sm);">Nurture</h3>
+            <p style="color: var(--color-text-light);">Fostering spiritual growth through biblical teaching, discipleship, and fellowship.</p>
+          </div>
+          <div class="reveal" style="padding: var(--spacing-md); background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <h3 style="font-size: 1.25rem; color: var(--color-primary); margin-bottom: var(--spacing-sm);">Serve</h3>
+            <p style="color: var(--color-text-light);">Demonstrating Christ's love through compassionate service to our community and world.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" aria-labelledby="about-title" class="reveal" style="padding: var(--spacing-lg) 0;">
+      <div class="container">
+        <h2 id="about-title" style="font-size: 2rem; color: var(--color-primary); margin-bottom: var(--spacing-md); text-align: center;">About Our Ministry</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg); align-items: start;">
+          <div>
+            <h3 style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: var(--spacing-sm);">Who We Are</h3>
+            <p style="margin-bottom: var(--spacing-sm); color: var(--color-text-light);">Grace Community Church is a vibrant evangelical ministry committed to glorifying God and making disciples of Jesus Christ. We are a diverse family of believers united by our love for the Lord and our desire to see lives transformed by the Gospel.</p>
+            <p style="color: var(--color-text-light);">Since our founding, we have been blessed to witness countless lives changed through the power of God's Word, the fellowship of believers, and the work of the Holy Spirit in our midst.</p>
+          </div>
+          <div>
+            <h3 style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: var(--spacing-sm);">What We Believe</h3>
+            <ul style="list-style-position: inside; color: var(--color-text-light); line-height: 2;">
+              <li>The Bible is the inspired and authoritative Word of God</li>
+              <li>Salvation is found in Jesus Christ alone through faith</li>
+              <li>The Holy Spirit empowers believers for godly living</li>
+              <li>The Church is called to worship, fellowship, and service</li>
+              <li>Christ will return to establish His eternal kingdom</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Core Values -->
+        <div style="margin-top: var(--spacing-lg);">
+          <h3 style="font-size: 1.75rem; color: var(--color-primary); margin-bottom: var(--spacing-md); text-align: center;">Our Core Values</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-md);">
+            <div class="reveal" style="padding: var(--spacing-md); background: var(--color-secondary); border-left: 4px solid var(--color-accent); border-radius: 4px;">
+              <h4 style="font-size: 1.125rem; color: var(--color-primary); margin-bottom: 0.5rem;">Biblical Authority</h4>
+              <p style="color: var(--color-text-light); font-size: 0.95rem;">We submit to Scripture as our final authority for faith and practice.</p>
+            </div>
+            <div class="reveal" style="padding: var(--spacing-md); background: var(--color-secondary); border-left: 4px solid var(--color-accent); border-radius: 4px;">
+              <h4 style="font-size: 1.125rem; color: var(--color-primary); margin-bottom: 0.5rem;">Christ-Centered Worship</h4>
+              <p style="color: var(--color-text-light); font-size: 0.95rem;">We gather to exalt Jesus Christ in spirit and truth through worship.</p>
+            </div>
+            <div class="reveal" style="padding: var(--spacing-md); background: var(--color-secondary); border-left: 4px solid var(--color-accent); border-radius: 4px;">
+              <h4 style="font-size: 1.125rem; color: var(--color-primary); margin-bottom: 0.5rem;">Authentic Community</h4>
+              <p style="color: var(--color-text-light); font-size: 0.95rem;">We cultivate genuine relationships marked by love, grace, and accountability.</p>
+            </div>
+            <div class="reveal" style="padding: var(--spacing-md); background: var(--color-secondary); border-left: 4px solid var(--color-accent); border-radius: 4px;">
+              <h4 style="font-size: 1.125rem; color: var(--color-primary); margin-bottom: 0.5rem;">Compassionate Outreach</h4>
+              <p style="color: var(--color-text-light); font-size: 0.95rem;">We extend God's love through acts of mercy and evangelism.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section aria-labelledby="impact-title" class="reveal" style="padding: var(--spacing-lg) 0; background-color: var(--color-secondary);">
+      <div class="container">
+        <h2 id="impact-title" style="font-size: 2rem; color: var(--color-primary); margin-bottom: var(--spacing-md); text-align: center;">Our Community Impact</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-md); text-align: center; margin-bottom: var(--spacing-lg);">
+          <div class="reveal">
+            <div style="font-size: 3rem; font-weight: bold; color: var(--color-accent); margin-bottom: 0.5rem;">25+</div>
+            <p style="color: var(--color-text-light); font-weight: 500;">Years of Ministry</p>
+          </div>
+          <div class="reveal">
+            <div style="font-size: 3rem; font-weight: bold; color: var(--color-accent); margin-bottom: 0.5rem;">500+</div>
+            <p style="color: var(--color-text-light); font-weight: 500;">Active Members</p>
+          </div>
+          <div class="reveal">
+            <div style="font-size: 3rem; font-weight: bold; color: var(--color-accent); margin-bottom: 0.5rem;">15+</div>
+            <p style="color: var(--color-text-light); font-weight: 500;">Community Programs</p>
+          </div>
+          <div class="reveal">
+            <div style="font-size: 3rem; font-weight: bold; color: var(--color-accent); margin-bottom: 0.5rem;">100%</div>
+            <p style="color: var(--color-text-light); font-weight: 500;">Committed to Christ</p>
+          </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div style="margin-top: var(--spacing-lg);">
+          <h3 style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: var(--spacing-md); text-align: center;">What People Are Saying</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-md);">
+            <blockquote class="reveal" style="background: white; padding: var(--spacing-md); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-top: 3px solid var(--color-accent);">
+              <p style="font-style: italic; color: var(--color-text-light); margin-bottom: var(--spacing-sm);">"Grace Community Church has been a blessing to our family. The teaching is biblical, the people are genuine, and we've found a true spiritual home."</p>
+              <footer style="font-weight: 600; color: var(--color-primary);">— Sarah & John M.</footer>
+            </blockquote>
+            <blockquote class="reveal" style="background: white; padding: var(--spacing-md); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-top: 3px solid var(--color-accent);">
+              <p style="font-style: italic; color: var(--color-text-light); margin-bottom: var(--spacing-sm);">"I came to Grace searching for answers, and I found Jesus. The community welcomed me with open arms and helped me grow in my faith."</p>
+              <footer style="font-weight: 600; color: var(--color-primary);">— Michael T.</footer>
+            </blockquote>
+            <blockquote class="reveal" style="background: white; padding: var(--spacing-md); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-top: 3px solid var(--color-accent);">
+              <p style="font-style: italic; color: var(--color-text-light); margin-bottom: var(--spacing-sm);">"The youth program at Grace has been instrumental in our teenagers' spiritual development. We're grateful for their dedication to young people."</p>
+              <footer style="font-weight: 600; color: var(--color-primary);">— The Rodriguez Family</footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" aria-labelledby="contact-title" class="reveal" style="padding: var(--spacing-lg) 0;">
+      <div class="container">
+        <h2 id="contact-title" style="font-size: 2rem; color: var(--color-primary); margin-bottom: var(--spacing-md); text-align: center;">Visit Us</h2>
+        <p style="text-align: center; color: var(--color-text-light); margin-bottom: var(--spacing-lg); max-width: 700px; margin-left: auto; margin-right: auto;">We'd love to meet you! Join us for worship, fellowship, and spiritual growth. All are welcome at Grace Community Church.</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg);">
+          <!-- Contact Information -->
+          <div class="reveal">
+            <h3 style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: var(--spacing-sm);">Contact Information</h3>
+            <div style="margin-bottom: var(--spacing-md);">
+              <h4 style="font-size: 1.125rem; color: var(--color-text); margin-bottom: 0.5rem; font-weight: 600;">Address</h4>
+              <address style="font-style: normal; color: var(--color-text-light); line-height: 1.8;">
+                123 Faith Avenue<br>
+                Springfield, IL 62701<br>
+                United States
+              </address>
+            </div>
+
+            <div style="margin-bottom: var(--spacing-md);">
+              <h4 style="font-size: 1.125rem; color: var(--color-text); margin-bottom: 0.5rem; font-weight: 600;">Phone</h4>
+              <p><a href="tel:+15551234567" style="color: var(--color-primary); text-decoration: none; font-weight: 500;">(555) 123-4567</a></p>
+            </div>
+
+            <div style="margin-bottom: var(--spacing-md);">
+              <h4 style="font-size: 1.125rem; color: var(--color-text); margin-bottom: 0.5rem; font-weight: 600;">Email</h4>
+              <p><a href="mailto:info@gracecommunitychurch.org" style="color: var(--color-primary); text-decoration: none; font-weight: 500;">info@gracecommunitychurch.org</a></p>
+            </div>
+          </div>
+
+          <!-- Service Times -->
+          <div class="reveal">
+            <h3 style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: var(--spacing-sm);">Service Times</h3>
+            <div style="background: var(--color-secondary); padding: var(--spacing-md); border-radius: 8px;">
+              <div style="margin-bottom: var(--spacing-sm);">
+                <h4 style="font-size: 1.125rem; color: var(--color-text); margin-bottom: 0.5rem; font-weight: 600;">Sunday Worship</h4>
+                <p style="color: var(--color-text-light); line-height: 1.8;">
+                  <strong>Morning Service:</strong> 9:00 AM - 10:30 AM<br>
+                  <strong>Sunday School:</strong> 10:45 AM - 11:45 AM
+                </p>
+              </div>
+
+              <div style="margin-bottom: var(--spacing-sm);">
+                <h4 style="font-size: 1.125rem; color: var(--color-text); margin-bottom: 0.5rem; font-weight: 600;">Midweek Service</h4>
+                <p style="color: var(--color-text-light); line-height: 1.8;">
+                  <strong>Wednesday Bible Study:</strong> 7:00 PM - 9:00 PM
+                </p>
+              </div>
+
+              <div>
+                <h4 style="font-size: 1.125rem; color: var(--color-text); margin-bottom: 0.5rem; font-weight: 600;">Prayer Meeting</h4>
+                <p style="color: var(--color-text-light); line-height: 1.8;">
+                  <strong>Friday Evening:</strong> 6:30 PM - 8:00 PM
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trust Indicators -->
+        <div style="margin-top: var(--spacing-lg); padding: var(--spacing-md); background: var(--color-secondary); border-radius: 8px; text-align: center;">
+          <p style="color: var(--color-text-light); margin-bottom: var(--spacing-sm);">
+            <strong style="color: var(--color-primary);">A trusted member of the community since 1998</strong>
+          </p>
+          <p style="color: var(--color-text-light); font-size: 0.9rem;">
+            Affiliated with the National Association of Evangelicals | Member of the Local Ministerial Alliance
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo" style="background-color: var(--color-primary); color: white; padding: var(--spacing-md) 0; margin-top: var(--spacing-lg);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-md); margin-bottom: var(--spacing-md);">
+        <div>
+          <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm);">Grace Community Church</h3>
+          <p style="opacity: 0.9; font-size: 0.95rem;">Sharing God's Love, Building God's Kingdom</p>
+        </div>
+
+        <div>
+          <h4 style="font-size: 1.125rem; margin-bottom: var(--spacing-sm);">Quick Links</h4>
+          <nav aria-label="Footer navigation">
+            <ul style="list-style: none; line-height: 2;">
+              <li><a href="#main" style="color: white; text-decoration: none; opacity: 0.9;">Home</a></li>
+              <li><a href="#about" style="color: white; text-decoration: none; opacity: 0.9;">About</a></li>
+              <li><a href="#contact" style="color: white; text-decoration: none; opacity: 0.9;">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div>
+          <h4 style="font-size: 1.125rem; margin-bottom: var(--spacing-sm);">Connect With Us</h4>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="https://www.facebook.com/gracecommunitychurch" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page" style="color: white; text-decoration: none; opacity: 0.9; transition: opacity 0.3s;">Facebook</a>
+            <a href="https://www.instagram.com/gracecommunitychurch" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram page" style="color: white; text-decoration: none; opacity: 0.9; transition: opacity 0.3s;">Instagram</a>
+            <a href="https://www.youtube.com/gracecommunitychurch" target="_blank" rel="noopener noreferrer" aria-label="Visit our YouTube channel" style="color: white; text-decoration: none; opacity: 0.9; transition: opacity 0.3s;">YouTube</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: var(--spacing-sm); text-align: center;">
+        <p style="opacity: 0.9; font-size: 0.9rem;">&copy; 2024 Grace Community Church. All rights reserved.</p>
+        <p style="opacity: 0.8; font-size: 0.85rem; margin-top: 0.5rem;">
+          Designed with love for our community |
+          <a href="mailto:webmaster@gracecommunitychurch.org" style="color: white; text-decoration: underline;">Technical Support</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll-triggered reveals using Intersection Observer
+    (function() {
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry, index) {
+          if (entry.isIntersecting) {
+            setTimeout(function() {
+              entry.target.classList.add('active');
+            }, index * 100);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      const revealElements = document.querySelectorAll('.reveal');
+      revealElements.forEach(function(element) {
+        observer.observe(element);
+      });
+    })();
+
+    // Morphing button interactions
+    (function() {
+      const buttons = document.querySelectorAll('.cta-button');
+      buttons.forEach(function(button) {
+        button.addEventListener('mouseenter', function() {
+          this.style.transform = 'translateY(-2px)';
+          this.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
+        });
+
+        button.addEventListener('mouseleave', function() {
+          this.style.transform = 'translateY(0)';
+          this.style.boxShadow = 'none';
+        });
+
+        button.addEventListener('mousedown', function() {
+          this.style.transform = 'translateY(0)';
+        });
+
+        button.addEventListener('mouseup', function() {
+          this.style.transform = 'translateY(-2px)';
+        });
+      });
+    })();
+
+    // Smooth scrolling for anchor links
+    (function() {
+      const links = document.querySelectorAll('a[href^="#"]');
+      links.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+
+            // Update focus for accessibility
+            targetElement.setAttribute('tabindex', '-1');
+            targetElement.focus();
+          }
+        });
+      });
+    })();
+
+    // Respect prefers-reduced-motion
+    (function() {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+      if (prefersReducedMotion.matches) {
+        const style = document.createElement('style');
+        style.textContent = '* { animation: none !important; transition: none !important; }';
+        document.head.appendChild(style);
+      }
+    })();
+  </script>
+</body>
+</html>
